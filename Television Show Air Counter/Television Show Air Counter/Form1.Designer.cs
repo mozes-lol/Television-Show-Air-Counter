@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.StartDate = new System.Windows.Forms.DateTimePicker();
+            this.EndDate = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,21 +59,23 @@
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // StartDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 48);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(430, 30);
-            this.dateTimePicker1.TabIndex = 0;
+            this.StartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.StartDate.Location = new System.Drawing.Point(13, 48);
+            this.StartDate.Name = "StartDate";
+            this.StartDate.Size = new System.Drawing.Size(430, 30);
+            this.StartDate.TabIndex = 0;
+            this.StartDate.ValueChanged += new System.EventHandler(this.StartDate_ValueChanged);
             // 
-            // dateTimePicker2
+            // EndDate
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker2.Location = new System.Drawing.Point(13, 119);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(430, 30);
-            this.dateTimePicker2.TabIndex = 1;
+            this.EndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.EndDate.Location = new System.Drawing.Point(13, 119);
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Size = new System.Drawing.Size(430, 30);
+            this.EndDate.TabIndex = 1;
+            this.EndDate.ValueChanged += new System.EventHandler(this.EndDate_ValueChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -170,8 +172,8 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.StartDate);
+            this.panel1.Controls.Add(this.EndDate);
             this.panel1.Location = new System.Drawing.Point(19, 38);
             this.panel1.Margin = new System.Windows.Forms.Padding(10);
             this.panel1.Name = "panel1";
@@ -352,8 +354,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker StartDate;
+        private System.Windows.Forms.DateTimePicker EndDate;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
