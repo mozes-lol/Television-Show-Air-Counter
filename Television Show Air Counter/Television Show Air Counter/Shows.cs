@@ -15,6 +15,8 @@ namespace Television_Show_Air_Counter
         public Shows()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
         private void Shows_FormClosed(object sender, FormClosedEventArgs e)
