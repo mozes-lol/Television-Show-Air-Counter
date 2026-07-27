@@ -15,8 +15,6 @@ namespace Television_Show_Air_Counter
         public Main()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
 
         private void StartDate_ValueChanged(object sender, EventArgs e)

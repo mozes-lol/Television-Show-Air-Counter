@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|c:\\projects\\television-show-air-counter\\television show air counter\\television show air counter\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|c:\\projects\\television-show-air-counter\\television show air counter\\television show air counter\\shows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\shows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Main.cs",
+              "RelativeDocumentMoniker": "Television Show Air Counter\\Main.cs",
+              "ToolTip": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Main.cs",
+              "RelativeToolTip": "Television Show Air Counter\\Main.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAuwGIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-27T05:57:15.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Shows.cs [Design]",
               "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Shows.cs",
               "RelativeDocumentMoniker": "Television Show Air Counter\\Shows.cs",
@@ -34,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Main.cs",
               "RelativeDocumentMoniker": "Television Show Air Counter\\Main.cs",

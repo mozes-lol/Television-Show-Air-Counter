@@ -19,10 +19,7 @@ namespace Television_Show_Air_Counter
 
         private void Shows_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms["Main"] != null)
-            {
-                Application.OpenForms["Main"].Enabled = true;
-            }
+
         }
     }
 }

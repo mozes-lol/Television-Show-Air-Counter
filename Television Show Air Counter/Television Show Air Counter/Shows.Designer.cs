@@ -69,14 +69,14 @@
             "Sunday"});
             this.checkedListBox1.Location = new System.Drawing.Point(12, 84);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(403, 207);
+            this.checkedListBox1.Size = new System.Drawing.Size(403, 236);
             this.checkedListBox1.TabIndex = 2;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(317, 297);
+            this.button2.Location = new System.Drawing.Point(317, 342);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 37);
             this.button2.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.LightCoral;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 297);
+            this.button3.Location = new System.Drawing.Point(12, 342);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 37);
             this.button3.TabIndex = 4;
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 345);
+            this.ClientSize = new System.Drawing.Size(427, 390);
             this.Controls.Add(this.TotalDaysDescription);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -117,6 +117,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "Shows";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Shows_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
