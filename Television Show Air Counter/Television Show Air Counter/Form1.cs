@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Television_Show_Air_Counter
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -91,7 +91,7 @@ namespace Television_Show_Air_Counter
 
         private void UpdateDaysDescription()
         {
-            TotalDaysDescription.Text = "The show has been aired for " + CountTotalDays(StartDate.Value, EndDate.Value) + " days.";
+            TotalDaysDescription.Text = "[The show] has been aired for " + CountTotalDays(StartDate.Value, EndDate.Value) + " days.";
         }
     }
 }

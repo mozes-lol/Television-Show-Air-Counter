@@ -2,9 +2,9 @@ C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television S
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\bin\Debug\Television Show Air Counter.exe
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\bin\Debug\Television Show Air Counter.pdb
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television Show Air Counter.csproj.AssemblyReference.cache
-C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.Form1.resources
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.Properties.Resources.resources
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television Show Air Counter.csproj.GenerateResource.cache
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television Show Air Counter.csproj.CoreCompileInputs.cache
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television Show Air Counter.exe
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television Show Air Counter.pdb
+C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.Main.resources
