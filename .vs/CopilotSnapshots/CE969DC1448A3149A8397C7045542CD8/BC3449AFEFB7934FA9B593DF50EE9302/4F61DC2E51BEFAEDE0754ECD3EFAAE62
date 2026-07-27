@@ -17,6 +17,11 @@ namespace Television_Show_Air_Counter
             InitializeComponent();
         }
 
+        private void CalculateDaysAired()
+        {
+
+        }
+
         private void StartDate_ValueChanged(object sender, EventArgs e)
         {
             if (StartDate.Value > EndDate.Value)
@@ -24,8 +29,7 @@ namespace Television_Show_Air_Counter
                 // If the start date is greater than the end date, adjust the end date to match the start date
                 EndDate.Value = StartDate.Value;
             }
-            UpdateDaysCount();
-            UpdateDaysDescription();
+            Console.WriteLine("Start Day of Week: " + StartDate.Value.DayOfWeek.ToString());
         }
 
         private void EndDate_ValueChanged(object sender, EventArgs e)
@@ -36,15 +40,8 @@ namespace Television_Show_Air_Counter
                 // If the end date is before the start date, adjust the start date to match the end date
                 StartDate.Value = EndDate.Value;
             }
-            UpdateDaysCount();
-            UpdateDaysDescription();
+            Console.WriteLine("End Day of Week: " + EndDate.Value.DayOfWeek.ToString());
         }
-
-        private int CountTotalDays(DateTime start, DateTime end)
-        {
-            if (start.Date > end.Date) return 0;    
-            return (int)(end.Date - start.Date).TotalDays + 1; // +1 to include both start and end dates
-        }   
 
         public Dictionary<DayOfWeek, int> CountDaysOfWeek(DateTime start, DateTime end)
         {
@@ -76,22 +73,6 @@ namespace Television_Show_Air_Counter
             }
 
             return counts;
-        }
-
-        private void UpdateDaysCount()
-        {
-            Monday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Monday].ToString();
-            Tuesday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Tuesday].ToString();
-            Wednesday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Wednesday].ToString();
-            Thursday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Thursday].ToString();
-            Friday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Friday].ToString();
-            Saturday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Saturday].ToString();
-            Sunday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Sunday].ToString();
-        }
-
-        private void UpdateDaysDescription()
-        {
-            TotalDaysDescription.Text = "The show has been aired for " + CountTotalDays(StartDate.Value, EndDate.Value) + " days.";
         }
     }
 }
