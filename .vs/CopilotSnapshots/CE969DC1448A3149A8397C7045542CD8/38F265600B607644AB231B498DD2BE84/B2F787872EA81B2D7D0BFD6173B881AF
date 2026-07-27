@@ -96,8 +96,7 @@ namespace Television_Show_Air_Counter
 
         private void showsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Shows showsForm = new Shows();
-            showsForm.Show();
+            
         }
     }
 }

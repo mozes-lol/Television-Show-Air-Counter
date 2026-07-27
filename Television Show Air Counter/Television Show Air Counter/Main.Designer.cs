@@ -222,6 +222,7 @@
             this.showsToolStripMenuItem.Name = "showsToolStripMenuItem";
             this.showsToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.showsToolStripMenuItem.Text = "Shows";
+            this.showsToolStripMenuItem.Click += new System.EventHandler(this.showsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
