@@ -54,6 +54,9 @@
             this.Saturday = new System.Windows.Forms.Label();
             this.Sunday = new System.Windows.Forms.Label();
             this.TotalDaysDescription = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -89,7 +92,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label6);
             this.flowLayoutPanel1.Controls.Add(this.label7);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(476, 38);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(476, 145);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -175,7 +178,7 @@
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.StartDate);
             this.panel1.Controls.Add(this.EndDate);
-            this.panel1.Location = new System.Drawing.Point(19, 38);
+            this.panel1.Location = new System.Drawing.Point(19, 145);
             this.panel1.Margin = new System.Windows.Forms.Padding(10);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
@@ -247,7 +250,7 @@
             this.flowLayoutPanel2.Controls.Add(this.Saturday);
             this.flowLayoutPanel2.Controls.Add(this.Sunday);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(646, 38);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(646, 145);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -329,17 +332,49 @@
             // 
             this.TotalDaysDescription.AutoSize = true;
             this.TotalDaysDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalDaysDescription.Location = new System.Drawing.Point(14, 270);
+            this.TotalDaysDescription.Location = new System.Drawing.Point(14, 377);
             this.TotalDaysDescription.Name = "TotalDaysDescription";
             this.TotalDaysDescription.Size = new System.Drawing.Size(572, 29);
             this.TotalDaysDescription.TabIndex = 7;
             this.TotalDaysDescription.Text = "The show has been aired for [TotalDaysCount] days.";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(19, 66);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(461, 37);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(15, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 20);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Select a show:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(15, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(153, 20);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Specify date range:";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 450);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TotalDaysDescription);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
@@ -389,6 +424,9 @@
         private System.Windows.Forms.Label TotalDaysDescription;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 
