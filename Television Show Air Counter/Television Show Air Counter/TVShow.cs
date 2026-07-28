@@ -19,3 +19,4 @@ namespace Television_Show_Air_Counter
             return AiringDays.Contains(day);
         }
     }
+}

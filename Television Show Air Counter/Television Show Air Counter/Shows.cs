@@ -34,5 +34,19 @@ namespace Television_Show_Air_Counter
             newShowForm.Show();
             this.Enabled = false;
         }
+
+        private void TVShowToConfigure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TVShowToConfigure.SelectedItem != null)
+            {
+                showIsSelected = true;
+                ShowDayFilter.Enabled = true;
+            }
+            else
+            {
+                showIsSelected = false;
+                ShowDayFilter.Enabled = false;
+            }
+        }
     }
 }

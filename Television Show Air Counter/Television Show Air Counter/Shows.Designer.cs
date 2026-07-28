@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TVShowToConfigure = new System.Windows.Forms.ComboBox();
             this.NewShow = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.ShowDayFilter = new System.Windows.Forms.CheckedListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.TotalDaysDescription = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // TVShowToConfigure
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(299, 37);
-            this.comboBox1.TabIndex = 0;
+            this.TVShowToConfigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.TVShowToConfigure.FormattingEnabled = true;
+            this.TVShowToConfigure.Location = new System.Drawing.Point(12, 32);
+            this.TVShowToConfigure.Name = "TVShowToConfigure";
+            this.TVShowToConfigure.Size = new System.Drawing.Size(299, 37);
+            this.TVShowToConfigure.TabIndex = 0;
+            this.TVShowToConfigure.SelectedIndexChanged += new System.EventHandler(this.TVShowToConfigure_SelectedIndexChanged);
             // 
             // NewShow
             // 
@@ -57,12 +58,12 @@
             this.NewShow.UseVisualStyleBackColor = true;
             this.NewShow.Click += new System.EventHandler(this.NewShow_Click);
             // 
-            // checkedListBox1
+            // ShowDayFilter
             // 
-            this.checkedListBox1.Enabled = false;
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.ShowDayFilter.Enabled = false;
+            this.ShowDayFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.ShowDayFilter.FormattingEnabled = true;
+            this.ShowDayFilter.Items.AddRange(new object[] {
             "Monday",
             "Tuesday",
             "Wednesday",
@@ -70,10 +71,10 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 106);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(403, 236);
-            this.checkedListBox1.TabIndex = 2;
+            this.ShowDayFilter.Location = new System.Drawing.Point(12, 106);
+            this.ShowDayFilter.Name = "ShowDayFilter";
+            this.ShowDayFilter.Size = new System.Drawing.Size(403, 236);
+            this.ShowDayFilter.TabIndex = 2;
             // 
             // button2
             // 
@@ -126,9 +127,9 @@
             this.Controls.Add(this.TotalDaysDescription);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.ShowDayFilter);
             this.Controls.Add(this.NewShow);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.TVShowToConfigure);
             this.Name = "Shows";
             this.Text = "Configure Shows";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Shows_FormClosed);
@@ -139,9 +140,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox TVShowToConfigure;
         private System.Windows.Forms.Button NewShow;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox ShowDayFilter;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label TotalDaysDescription;

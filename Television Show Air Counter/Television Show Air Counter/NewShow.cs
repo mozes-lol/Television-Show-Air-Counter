@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Television_Show_Air_Counter
 {
@@ -23,6 +24,18 @@ namespace Television_Show_Air_Counter
             {
                 Application.OpenForms["Shows"].Enabled = true;
                 Console.WriteLine("Shows form re-enabled.");
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox1.Text))
+            {
+                Save.Enabled = true;
+            }
+            else
+            {
+                Save.Enabled = false;
             }
         }
     }

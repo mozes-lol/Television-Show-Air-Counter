@@ -30,7 +30,7 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Save = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -41,6 +41,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(441, 34);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -52,16 +53,17 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Enter a name for the new show:";
             // 
-            // button2
+            // Save
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(355, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 37);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Save.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.Save.Enabled = false;
+            this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.Location = new System.Drawing.Point(355, 72);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(98, 37);
+            this.Save.TabIndex = 11;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -79,7 +81,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 120);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "NewShow";
@@ -94,7 +96,7 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button button1;
     }
 }
