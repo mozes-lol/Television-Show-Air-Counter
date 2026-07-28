@@ -12,6 +12,7 @@ namespace Television_Show_Air_Counter
 {
     public partial class Shows : Form
     {
+        private bool showIsSelected = false;
         public Shows()
         {
             InitializeComponent();
