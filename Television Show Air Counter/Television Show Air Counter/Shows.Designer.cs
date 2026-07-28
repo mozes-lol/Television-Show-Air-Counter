@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.NewShow = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,15 +46,16 @@
             this.comboBox1.Size = new System.Drawing.Size(299, 37);
             this.comboBox1.TabIndex = 0;
             // 
-            // button1
+            // NewShow
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(317, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "New Show";
-            this.button1.UseVisualStyleBackColor = true;
+            this.NewShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewShow.Location = new System.Drawing.Point(317, 34);
+            this.NewShow.Name = "NewShow";
+            this.NewShow.Size = new System.Drawing.Size(98, 37);
+            this.NewShow.TabIndex = 1;
+            this.NewShow.Text = "New Show";
+            this.NewShow.UseVisualStyleBackColor = true;
+            this.NewShow.Click += new System.EventHandler(this.NewShow_Click);
             // 
             // checkedListBox1
             // 
@@ -126,7 +127,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NewShow);
             this.Controls.Add(this.comboBox1);
             this.Name = "Shows";
             this.Text = "Configure Shows";
@@ -139,7 +140,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NewShow;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

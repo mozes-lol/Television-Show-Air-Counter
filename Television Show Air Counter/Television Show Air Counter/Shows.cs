@@ -27,5 +27,12 @@ namespace Television_Show_Air_Counter
                 Application.OpenForms["Main"].Enabled = true;
             }
         }
+
+        private void NewShow_Click(object sender, EventArgs e)
+        {
+            NewShow newShowForm = new NewShow();
+            newShowForm.Show();
+            this.Enabled = false;
+        }
     }
 }

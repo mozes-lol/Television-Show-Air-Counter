@@ -84,6 +84,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "NewShow";
             this.Text = "New Show";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NewShow_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

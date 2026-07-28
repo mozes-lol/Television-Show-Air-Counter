@@ -9,3 +9,4 @@ C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television S
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television Show Air Counter.pdb
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.Main.resources
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.Shows.resources
+C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.NewShow.resources

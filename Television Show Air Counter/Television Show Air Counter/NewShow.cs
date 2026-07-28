@@ -16,5 +16,14 @@ namespace Television_Show_Air_Counter
         {
             InitializeComponent();
         }
+
+        private void NewShow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Shows"] != null)
+            {
+                Application.OpenForms["Shows"].Enabled = true;
+                Console.WriteLine("Shows form re-enabled.");
+            }
+        }
     }
 }
