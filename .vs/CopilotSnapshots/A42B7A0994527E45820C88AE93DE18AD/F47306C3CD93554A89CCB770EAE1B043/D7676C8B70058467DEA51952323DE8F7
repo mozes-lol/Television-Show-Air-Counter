@@ -23,9 +23,7 @@ namespace Television_Show_Air_Counter
         {
             if (Application.OpenForms["Shows"] != null)
             {
-                var showsForm = (Shows)Application.OpenForms["Shows"];
-                showsForm.Enabled = true;
-                showsForm.LoadShows();
+                Application.OpenForms["Shows"].Enabled = true;
                 Console.WriteLine("Shows form re-enabled.");
             }
         }

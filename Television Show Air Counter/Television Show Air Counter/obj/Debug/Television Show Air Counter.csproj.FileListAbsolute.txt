@@ -10,3 +10,6 @@ C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television S
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.Main.resources
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.Shows.resources
 C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Television_Show_Air_Counter.NewShow.resources
+C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Television-Show-Air-Counter\Television Show Air Counter\Television Show Air Counter\obj\Debug\Televisi.05A73434.Up2Date
