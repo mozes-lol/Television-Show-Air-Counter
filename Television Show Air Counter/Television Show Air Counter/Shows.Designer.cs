@@ -80,7 +80,6 @@
             // Save
             // 
             this.Save.Enabled = false;
-            this.Save.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.Location = new System.Drawing.Point(317, 348);
             this.Save.Name = "Save";
@@ -99,6 +98,7 @@
             this.Delete.TabIndex = 4;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // TotalDaysDescription
             // 

@@ -223,5 +223,26 @@ namespace Television_Show_Air_Counter
 
             Save.Enabled = hasChanges;
         }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            TVShow selectedShow = (TVShow)TVShowToConfigure.SelectedItem;
+            var result = MessageBox.Show($"Are you sure you want to delete '{selectedShow.Name}'?",
+                             "Confirm Delete",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                if (TVShowToConfigure.DataSource is List<TVShow> shows)
+                {
+                    shows.Remove(selectedShow);
+                    string showsFile = "shows.json";
+                    File.WriteAllText(showsFile, JsonConvert.SerializeObject(shows, Formatting.Indented));
+                    LoadShows();
+                    MessageBox.Show("Show deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }
