@@ -54,7 +54,7 @@
             this.Saturday = new System.Windows.Forms.Label();
             this.Sunday = new System.Windows.Forms.Label();
             this.TotalDaysDescription = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TVShowToFilter = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -339,14 +339,15 @@
             this.TotalDaysDescription.TabIndex = 7;
             this.TotalDaysDescription.Text = "The show has been aired for [TotalDaysCount] days.";
             // 
-            // comboBox1
+            // TVShowToFilter
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(461, 37);
-            this.comboBox1.TabIndex = 8;
+            this.TVShowToFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.TVShowToFilter.FormattingEnabled = true;
+            this.TVShowToFilter.Location = new System.Drawing.Point(19, 66);
+            this.TVShowToFilter.Name = "TVShowToFilter";
+            this.TVShowToFilter.Size = new System.Drawing.Size(461, 37);
+            this.TVShowToFilter.TabIndex = 8;
+            this.TVShowToFilter.SelectedIndexChanged += new System.EventHandler(this.ShowToFilter_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -386,7 +387,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.TVShowToFilter);
             this.Controls.Add(this.TotalDaysDescription);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
@@ -436,7 +437,7 @@
         private System.Windows.Forms.Label TotalDaysDescription;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox TVShowToFilter;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

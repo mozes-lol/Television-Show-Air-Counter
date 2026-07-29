@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Television_Show_Air_Counter
 {
@@ -17,6 +20,7 @@ namespace Television_Show_Air_Counter
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            LoadShows();
         }
 
         private void StartDate_ValueChanged(object sender, EventArgs e)
@@ -80,6 +84,48 @@ namespace Television_Show_Air_Counter
             return counts;
         }
 
+        public void LoadShows()
+        {
+            string showsFile = "shows.json";
+            if (File.Exists(showsFile))
+            {
+                try
+                {
+                    string json = File.ReadAllText(showsFile);
+                    if (!string.IsNullOrWhiteSpace(json))
+                    {
+                        var shows = JsonConvert.DeserializeObject<List<TVShow>>(json);
+
+                        // Keep track of current selection if any
+                        string selectedShowName = TVShowToFilter.SelectedItem != null
+                            ? ((TVShow)TVShowToFilter.SelectedItem).Name
+                            : null;
+
+                        TVShowToFilter.DataSource = null; // reset
+                        TVShowToFilter.DataSource = shows;
+                        TVShowToFilter.DisplayMember = "Name";
+
+                        if (selectedShowName != null)
+                        {
+                            var showToSelect = shows.FirstOrDefault(s => s.Name == selectedShowName);
+                            if (showToSelect != null)
+                            {
+                                TVShowToFilter.SelectedItem = showToSelect;
+                            }
+                        }
+                        else
+                        {
+                            TVShowToFilter.SelectedIndex = -1;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading shows: " + ex.Message);
+                }
+            }
+        }
+
         private void UpdateDaysCount()
         {
             Monday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Monday].ToString();
@@ -101,6 +147,11 @@ namespace Television_Show_Air_Counter
             Shows showsForm = new Shows();
             showsForm.Show();
             this.Enabled = false;
+        }
+
+        private void ShowToFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
