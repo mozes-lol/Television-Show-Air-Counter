@@ -84,6 +84,24 @@ namespace Television_Show_Air_Counter
             return counts;
         }
 
+        private int CountAiredDays(DateTime start, DateTime end, TVShow show)
+        {
+            // If no show is selected or dates are invalid, return 0
+            if (show == null || start.Date > end.Date) return 0;
+
+            // Get the total count of every day of the week in the date range
+            var dayCounts = CountDaysOfWeek(start, end);
+            int totalAiredDays = 0;
+
+            // Sum up the counts only for the days the show actually airs
+            foreach (DayOfWeek day in show.AiringDays)
+            {
+                totalAiredDays += dayCounts[day];
+            }
+
+            return totalAiredDays;
+        }
+
         public void LoadShows()
         {
             string showsFile = "shows.json";
@@ -138,18 +156,32 @@ namespace Television_Show_Air_Counter
 
         private void UpdateDaysCount()
         {
-            Monday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Monday].ToString();
-            Tuesday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Tuesday].ToString();
-            Wednesday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Wednesday].ToString();
-            Thursday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Thursday].ToString();
-            Friday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Friday].ToString();
-            Saturday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Saturday].ToString();
-            Sunday.Text = CountDaysOfWeek(StartDate.Value, EndDate.Value)[DayOfWeek.Sunday].ToString();
+            var counts = CountDaysOfWeek(StartDate.Value, EndDate.Value);
+            TVShow selectedShow = TVShowToFilter.SelectedItem as TVShow;
+
+            // If a show is selected, only display the count if it airs on that day. Otherwise, show 0.
+            // If no show is selected, default to showing the total occurrences of that day.
+            Monday.Text = (selectedShow == null || selectedShow.AirsOn(DayOfWeek.Monday)) ? counts[DayOfWeek.Monday].ToString() : "0";
+            Tuesday.Text = (selectedShow == null || selectedShow.AirsOn(DayOfWeek.Tuesday)) ? counts[DayOfWeek.Tuesday].ToString() : "0";
+            Wednesday.Text = (selectedShow == null || selectedShow.AirsOn(DayOfWeek.Wednesday)) ? counts[DayOfWeek.Wednesday].ToString() : "0";
+            Thursday.Text = (selectedShow == null || selectedShow.AirsOn(DayOfWeek.Thursday)) ? counts[DayOfWeek.Thursday].ToString() : "0";
+            Friday.Text = (selectedShow == null || selectedShow.AirsOn(DayOfWeek.Friday)) ? counts[DayOfWeek.Friday].ToString() : "0";
+            Saturday.Text = (selectedShow == null || selectedShow.AirsOn(DayOfWeek.Saturday)) ? counts[DayOfWeek.Saturday].ToString() : "0";
+            Sunday.Text = (selectedShow == null || selectedShow.AirsOn(DayOfWeek.Sunday)) ? counts[DayOfWeek.Sunday].ToString() : "0";
         }
 
         private void UpdateDaysDescription()
         {
-            TotalDaysDescription.Text = "[The show] has been aired for " + CountTotalDays(StartDate.Value, EndDate.Value) + " days.";
+            // Check if a show is actually selected in the ComboBox
+            if (TVShowToFilter.SelectedItem is TVShow selectedShow)
+            {
+                int airedDays = CountAiredDays(StartDate.Value, EndDate.Value, selectedShow);
+                TotalDaysDescription.Text = $"'{selectedShow.Name}' has been aired for {airedDays} days.";
+            }
+            else
+            {
+                TotalDaysDescription.Text = "Please select a show to see air days.";
+            }
         }
 
         private void showsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -161,7 +193,8 @@ namespace Television_Show_Air_Counter
 
         private void ShowToFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            UpdateDaysCount();
+            UpdateDaysDescription();
         }
     }
 }

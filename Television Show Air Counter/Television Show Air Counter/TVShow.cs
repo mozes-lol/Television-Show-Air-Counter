@@ -10,6 +10,7 @@ namespace Television_Show_Air_Counter
         // This will store only the days the show actually airs (e.g. Monday, Wednesday)
         public List<DayOfWeek> AiringDays { get; set; } = new List<DayOfWeek>();
 
+        //Not sure why these are included. Be sure to remove these once done
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
