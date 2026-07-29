@@ -196,5 +196,15 @@ namespace Television_Show_Air_Counter
             UpdateDaysCount();
             UpdateDaysDescription();
         }
+
+        private void Main_EnabledChanged(object sender, EventArgs e)
+        {
+            LoadShows();
+        }
+
+        private void TVShowToFilter_Click(object sender, EventArgs e)
+        {
+            LoadShows();
+        }
     }
 }

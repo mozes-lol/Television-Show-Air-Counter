@@ -348,6 +348,7 @@
             this.TVShowToFilter.Size = new System.Drawing.Size(461, 37);
             this.TVShowToFilter.TabIndex = 8;
             this.TVShowToFilter.SelectedIndexChanged += new System.EventHandler(this.ShowToFilter_SelectedIndexChanged);
+            this.TVShowToFilter.Click += new System.EventHandler(this.TVShowToFilter_Click);
             // 
             // label8
             // 
@@ -396,6 +397,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Television Form Air Counter";
+            this.EnabledChanged += new System.EventHandler(this.Main_EnabledChanged);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|c:\\projects\\television-show-air-counter\\television show air counter\\television show air counter\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\television show air counter\\shows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\shows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|c:\\projects\\television-show-air-counter\\television show air counter\\television show air counter\\tvshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\tvshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|c:\\projects\\television-show-air-counter\\television show air counter\\television show air counter\\shows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\shows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\bin\\Debug\\shows.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Television Show Air Counter\\bin\\Debug\\shows.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|c:\\projects\\television-show-air-counter\\television show air counter\\television show air counter\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|c:\\projects\\television-show-air-counter\\television show air counter\\television show air counter\\shows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\shows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|c:\\projects\\television-show-air-counter\\television show air counter\\television show air counter\\tvshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BA97F9-8AEA-409A-A21D-A9BFA88B6A7E}|Television Show Air Counter\\Television Show Air Counter.csproj|solutionrelative:television show air counter\\tvshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Main.cs",
               "RelativeDocumentMoniker": "Television Show Air Counter\\Main.cs",
@@ -57,7 +57,7 @@
               "RelativeDocumentMoniker": "Television Show Air Counter\\Main.cs",
               "ToolTip": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Main.cs",
               "RelativeToolTip": "Television Show Air Counter\\Main.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAIwMUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAYwM4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-27T05:57:15.723Z",
               "IsPinned": true,
@@ -65,7 +65,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "TVShow.cs",
               "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\TVShow.cs",
               "RelativeDocumentMoniker": "Television Show Air Counter\\TVShow.cs",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Shows.cs [Design]",
               "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Shows.cs",
               "RelativeDocumentMoniker": "Television Show Air Counter\\Shows.cs",
@@ -90,20 +90,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Shows.cs",
               "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Shows.cs",
               "RelativeDocumentMoniker": "Television Show Air Counter\\Shows.cs",
               "ToolTip": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Shows.cs",
               "RelativeToolTip": "Television Show Air Counter\\Shows.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAmwL8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAANkAAAAAAAAAAAAawPUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-27T06:06:40.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "shows.json",
               "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\bin\\Debug\\shows.json",
               "RelativeDocumentMoniker": "Television Show Air Counter\\bin\\Debug\\shows.json",
