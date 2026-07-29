@@ -96,6 +96,16 @@ namespace Television_Show_Air_Counter
                     {
                         var shows = JsonConvert.DeserializeObject<List<TVShow>>(json);
 
+                        // Testing /////////////
+
+                        Console.WriteLine(shows[0].AiringDays[0]);
+                        foreach (var show in shows)
+                        {
+                            Console.WriteLine($"Show: {show.Name}, Start: {show.StartDate}, End: {show.EndDate}, Airing Days: {string.Join(", ", show.AiringDays)}");
+                        }
+
+                        ////////////////////////
+
                         // Keep track of current selection if any
                         string selectedShowName = TVShowToFilter.SelectedItem != null
                             ? ((TVShow)TVShowToFilter.SelectedItem).Name
