@@ -73,6 +73,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "shows.json",
+              "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\bin\\Debug\\shows.json",
+              "RelativeDocumentMoniker": "Television Show Air Counter\\bin\\Debug\\shows.json",
+              "ToolTip": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\bin\\Debug\\shows.json",
+              "RelativeToolTip": "Television Show Air Counter\\bin\\Debug\\shows.json",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-29T05:30:12.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
               "Title": "TVShow.cs",
               "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\TVShow.cs",
@@ -104,22 +117,9 @@
               "RelativeDocumentMoniker": "Television Show Air Counter\\Shows.cs",
               "ToolTip": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\Shows.cs",
               "RelativeToolTip": "Television Show Air Counter\\Shows.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAAAuwOgAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAANoAAAAAAAAAAAAkwPIAAAB/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-27T06:06:40.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "shows.json",
-              "DocumentMoniker": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\bin\\Debug\\shows.json",
-              "RelativeDocumentMoniker": "Television Show Air Counter\\bin\\Debug\\shows.json",
-              "ToolTip": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\bin\\Debug\\shows.json",
-              "RelativeToolTip": "Television Show Air Counter\\bin\\Debug\\shows.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-29T05:30:12.298Z",
               "EditorCaption": ""
             },
             {
@@ -142,7 +142,7 @@
               "RelativeDocumentMoniker": "Television Show Air Counter\\NewShow.cs",
               "ToolTip": "C:\\Projects\\Television-Show-Air-Counter\\Television Show Air Counter\\Television Show Air Counter\\NewShow.cs",
               "RelativeToolTip": "Television Show Air Counter\\NewShow.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAgwFoAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAkwFoAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-28T06:24:18.762Z",
               "EditorCaption": ""

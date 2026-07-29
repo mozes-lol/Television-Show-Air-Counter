@@ -43,8 +43,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.showsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.Monday = new System.Windows.Forms.Label();
             this.Tuesday = new System.Windows.Forms.Label();
@@ -212,9 +210,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showsToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.showsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(773, 28);
@@ -227,18 +223,6 @@
             this.showsToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.showsToolStripMenuItem.Text = "Shows";
             this.showsToolStripMenuItem.Click += new System.EventHandler(this.showsToolStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.aboutToolStripMenuItem.Text = "About";
             // 
             // flowLayoutPanel2
             // 
@@ -437,8 +421,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label TotalDaysDescription;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ComboBox TVShowToFilter;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
