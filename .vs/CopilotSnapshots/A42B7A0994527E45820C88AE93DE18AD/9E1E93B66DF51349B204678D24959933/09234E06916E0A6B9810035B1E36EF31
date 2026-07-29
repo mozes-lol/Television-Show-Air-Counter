@@ -183,45 +183,5 @@ namespace Television_Show_Air_Counter
                 }
             }
         }
-
-        private void ShowDayFilter_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            if (isReverting) return;
-
-            // We use BeginInvoke so that the evaluation happens after the CheckState has updated
-            this.BeginInvoke((MethodInvoker)delegate
-            {
-                CheckForUnsavedChanges();
-            });
-        }
-
-        private void CheckForUnsavedChanges()
-        {
-            if (TVShowToConfigure.SelectedItem == null)
-            {
-                Save.Enabled = false;
-                return;
-            }
-
-            TVShow selectedShow = (TVShow)TVShowToConfigure.SelectedItem;
-            bool hasChanges = false;
-
-            for (int i = 0; i < ShowDayFilter.Items.Count; i++)
-            {
-                string dayName = ShowDayFilter.Items[i].ToString();
-                if (Enum.TryParse(dayName, out DayOfWeek day))
-                {
-                    bool isChecked = ShowDayFilter.GetItemChecked(i);
-                    bool originallyChecked = selectedShow.AiringDays.Contains(day);
-                    if (isChecked != originallyChecked)
-                    {
-                        hasChanges = true;
-                        break;
-                    }
-                }
-            }
-
-            Save.Enabled = hasChanges;
-        }
     }
 }

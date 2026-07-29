@@ -1,0 +1,131 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Newtonsoft.Json;
+
+namespace Television_Show_Air_Counter
+{
+    public partial class Shows : Form
+    {
+        private bool showIsSelected = false;
+        public Shows()
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            LoadShows();
+        }
+
+        public void LoadShows()
+        {
+            string showsFile = "shows.json";
+            if (File.Exists(showsFile))
+            {
+                try
+                {
+                    string json = File.ReadAllText(showsFile);
+                    if (!string.IsNullOrWhiteSpace(json))
+                    {
+                        var shows = JsonConvert.DeserializeObject<List<TVShow>>(json);
+
+                        // Keep track of current selection if any
+                        string selectedShowName = TVShowToConfigure.SelectedItem != null 
+                            ? ((TVShow)TVShowToConfigure.SelectedItem).Name 
+                            : null;
+
+                        TVShowToConfigure.DataSource = null; // reset
+                        TVShowToConfigure.DataSource = shows;
+                        TVShowToConfigure.DisplayMember = "Name";
+
+                        if (selectedShowName != null)
+                        {
+                            var showToSelect = shows.FirstOrDefault(s => s.Name == selectedShowName);
+                            if (showToSelect != null)
+                            {
+                                TVShowToConfigure.SelectedItem = showToSelect;
+                            }
+                        }
+                        else
+                        {
+                            TVShowToConfigure.SelectedIndex = -1;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading shows: " + ex.Message);
+                }
+            }
+        }
+
+        private void Shows_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Main"] != null)
+            {
+                Application.OpenForms["Main"].Enabled = true;
+            }
+        }
+
+        private void NewShow_Click(object sender, EventArgs e)
+        {
+            NewShow newShowForm = new NewShow();
+            newShowForm.Show();
+            this.Enabled = false;
+        }
+
+        private void TVShowToConfigure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TVShowToConfigure.SelectedItem != null)
+            {
+                showIsSelected = true;
+                ShowDayFilter.Enabled = true;
+
+                TVShow selectedShow = (TVShow)TVShowToConfigure.SelectedItem;
+                for (int i = 0; i < ShowDayFilter.Items.Count; i++)
+                {
+                    string dayName = ShowDayFilter.Items[i].ToString();
+                    if (Enum.TryParse(dayName, out DayOfWeek day))
+                    {
+                        ShowDayFilter.SetItemChecked(i, selectedShow.AiringDays.Contains(day));
+                    }
+                }
+            }
+            else
+            {
+                showIsSelected = false;
+                ShowDayFilter.Enabled = false;
+            }
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            if (TVShowToConfigure.SelectedItem != null)
+            {
+                TVShow selectedShow = (TVShow)TVShowToConfigure.SelectedItem;
+
+                selectedShow.AiringDays.Clear();
+                foreach (var item in ShowDayFilter.CheckedItems)
+                {
+                    if (Enum.TryParse(item.ToString(), out DayOfWeek day))
+                    {
+                        selectedShow.AiringDays.Add(day);
+                    }
+                }
+
+                if (TVShowToConfigure.DataSource is List<TVShow> shows)
+                {
+                    string showsFile = "shows.json";
+                    File.WriteAllText(showsFile, JsonConvert.SerializeObject(shows, Formatting.Indented));
+                    MessageBox.Show("Configuration saved successfully!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+    }
+}
