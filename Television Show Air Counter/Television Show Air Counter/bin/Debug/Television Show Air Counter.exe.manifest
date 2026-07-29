@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Television Show Air Counter.exe" size="29728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Television Show Air Counter.exe" size="30240">
       <assemblyIdentity name="Television Show Air Counter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HgQsRa1RzYSK9aAUiwLq+kVDzFOZJ2X5tAOG21LT1do=</dsig:DigestValue>
+        <dsig:DigestValue>MrsqfNUe1HWaVDYV98Ug3aWeJUYKRIB5WQL6q1ORuT4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

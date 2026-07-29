@@ -44,22 +44,30 @@ namespace Television_Show_Air_Counter
 
         private void Save_Click(object sender, EventArgs e)
         {
-            string showsFile = "shows.json";
-            List<TVShow> shows = new List<TVShow>();
+            var result = MessageBox.Show($"Are you sure you want to add '{textBox1.Text}'?",
+                             "Add new show",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question);
 
-            if (File.Exists(showsFile))
+            if (result == DialogResult.Yes)
             {
-                string json = File.ReadAllText(showsFile);
-                if (!string.IsNullOrWhiteSpace(json))
+
+                string showsFile = "shows.json";
+                List<TVShow> shows = new List<TVShow>();
+
+                if (File.Exists(showsFile))
                 {
-                    shows = JsonConvert.DeserializeObject<List<TVShow>>(json);
+                    string json = File.ReadAllText(showsFile);
+                    if (!string.IsNullOrWhiteSpace(json))
+                    {
+                        shows = JsonConvert.DeserializeObject<List<TVShow>>(json);
+                    }
                 }
-            }
 
-            TVShow newShow = new TVShow
-            {
-                Name = textBox1.Text.Trim(),
-                AiringDays = new List<DayOfWeek>
+                TVShow newShow = new TVShow
+                {
+                    Name = textBox1.Text.Trim(),
+                    AiringDays = new List<DayOfWeek>
                 {
                     DayOfWeek.Monday,
                     DayOfWeek.Tuesday,
@@ -69,17 +77,19 @@ namespace Television_Show_Air_Counter
                     DayOfWeek.Saturday,
                     DayOfWeek.Sunday
                 },
-                StartDate = DateTime.Now.Date,
-                EndDate = DateTime.Now.Date
-            };
+                    StartDate = DateTime.Now.Date,
+                    EndDate = DateTime.Now.Date
+                };
 
-            shows.Add(newShow);
+                shows.Add(newShow);
 
-            File.WriteAllText(showsFile, JsonConvert.SerializeObject(shows, Formatting.Indented));
+                File.WriteAllText(showsFile, JsonConvert.SerializeObject(shows, Formatting.Indented));
 
-            // Optionally, update the Shows form if it requires a refresh.
+                // Optionally, update the Shows form if it requires a refresh.
 
-            this.Close();
+                this.Close();
+                MessageBox.Show("Show added successfully!", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
