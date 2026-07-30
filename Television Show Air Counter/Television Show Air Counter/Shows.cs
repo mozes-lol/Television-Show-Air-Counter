@@ -180,6 +180,8 @@ namespace Television_Show_Air_Counter
                         File.WriteAllText(showsFile, JsonConvert.SerializeObject(shows, Formatting.Indented));
                         MessageBox.Show("Configuration saved successfully!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
+                    Save.Enabled = false;
                 }
             }
         }
